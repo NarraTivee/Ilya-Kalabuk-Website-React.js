@@ -15,8 +15,8 @@ const Contact = ({ showNotification }) => {
 
         try {
             const templateParams = {
-                from_name: formData.name,
-                from_email: formData.email,
+                user_name: formData.name,
+                user_email: formData.email,
                 message: formData.message,
                 to_name: 'Ilya',
                 reply_to: formData.email
