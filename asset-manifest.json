@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ilya-Kalabuk-Website-React.js/static/css/main.b3aad6f0.css",
+    "main.js": "/Ilya-Kalabuk-Website-React.js/static/js/main.a0187626.js",
+    "index.html": "/Ilya-Kalabuk-Website-React.js/index.html",
+    "main.b3aad6f0.css.map": "/Ilya-Kalabuk-Website-React.js/static/css/main.b3aad6f0.css.map",
+    "main.a0187626.js.map": "/Ilya-Kalabuk-Website-React.js/static/js/main.a0187626.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3aad6f0.css",
+    "static/js/main.a0187626.js"
+  ]
+}
