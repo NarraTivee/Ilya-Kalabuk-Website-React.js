@@ -24,7 +24,7 @@ const Projects = () => {
             id: 1,
             title: 'Руководство по HTML5 & CSS3',
             description: 'Полноценное современное и простое руководство для новичков. Подробное объяснение с примерами реального кода.',
-            image: process.env.PUBLIC_URL + 'images/rukHTML+CSS.jpg',
+            image: process.env.PUBLIC_URL + '/images/rukHTML+CSS.jpg',
             tech: ['HTML5', 'CSS3', 'JavaScript'],
             liveDemo: 'https://narrativee.github.io/RukovodstvoHTML-CSS-for-GM3/',
             github: 'https://github.com/NarraTivee/RukovodstvoHTML-CSS-for-GM3'
@@ -33,7 +33,7 @@ const Projects = () => {
             id: 2,
             title: 'Логистическая компания HKL',
             description: 'Итоговая версия сайта-визитки для логистической компании Halaburda&Kravel Logistic. Четко, минималистично и по делу. Выполнен на Astro.js.',
-            image: process.env.PUBLIC_URL + 'images/AstroHKL.jpg',
+            image: process.env.PUBLIC_URL + '/images/AstroHKL.jpg',
             tech: ['React.js', 'Astro.js', 'SCSS/SASS'],
             liveDemo: 'https://narrativee.github.io/HKL-with-Astro/',
             github: 'https://github.com/NarraTivee/HKL-with-Astro'
@@ -42,7 +42,7 @@ const Projects = () => {
             id: 3,
             title: 'Версия сайта для логистической компании',
             description: 'Вторая версия сайта-визитки для логистической компании Halaburda&Kravel Logistic основанная на React.js.',
-            image: process.env.PUBLIC_URL + 'images/hklsecondvershion.jpg',
+            image: process.env.PUBLIC_URL + '/images/hklsecondvershion.jpg',
             tech: ['React.js', 'SCSS/SASS'],
             liveDemo: 'https://narrativee.github.io/HKL_secondVershion/',
             github: 'https://github.com/NarraTivee/HKL_secondVershion'
@@ -51,7 +51,7 @@ const Projects = () => {
             id: 4,
             title: 'Сайт-визитка логистической компании',
             description: 'Первая версия сайта-визитки на чистом HTML5 и CSS3 для логистической компании Halaburda&Kravel Logistic.',
-            image: process.env.PUBLIC_URL + 'images/hklFIrstVershion.jpg',
+            image: process.env.PUBLIC_URL + '/images/hklFIrstVershion.jpg',
             tech: ['HTML5', 'CSS3', 'JavaScript'],
             liveDemo: 'https://narrativee.github.io/HKL/',
             github: 'https://github.com/NarraTivee/HKL'
@@ -60,7 +60,7 @@ const Projects = () => {
             id: 5,
             title: 'Интернет магазин',
             description: 'Версия интернет магазина по продажи цифровых товаров для реального заказчика основаный на чистом HTML5 и CSS3.',
-            image: process.env.PUBLIC_URL + 'images/BigSell.jpg',
+            image: process.env.PUBLIC_URL + '/images/BigSell.jpg',
             tech: ['HTML5', 'CSS3'],
             liveDemo: 'https://narrativee.github.io/BigSell/',
             github: 'https://github.com/NarraTivee/BigSell'
@@ -69,7 +69,7 @@ const Projects = () => {
             id: 6,
             title: 'Информационный двухстраничный сайт',
             description: 'Один из первых моих проектов. Стандартный информационный двухстраничный сайт на чистом HTML5 и CSS3.',
-            image: process.env.PUBLIC_URL + 'images/Globerys.jpg',
+            image: process.env.PUBLIC_URL + '/images/Globerys.jpg',
             tech: ['HTML5', 'CSS3'],
             liveDemo: 'https://narrativee.github.io/globerys/globerys.html',
             github: 'https://github.com/NarraTivee/globerys'

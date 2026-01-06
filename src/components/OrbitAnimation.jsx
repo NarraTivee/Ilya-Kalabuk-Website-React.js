@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-
+import avatarImage from './images/ilya kalabyk.jpg';
 const OrbitAnimation = () => {
     const containerRef = useRef(null);
 
@@ -87,7 +87,7 @@ const OrbitAnimation = () => {
         <div className="avatar-container" ref={containerRef}>
             <div className="sun-core">
                 <img
-                    src="images/ilya kalabyk.jpg"
+                    src={avatarImage}
                     alt="Ilya Kalabuk"
                     style={{
                         width: '100%',
