@@ -1,11 +1,4 @@
 import { useEffect } from 'react';
-// Импортируем все изображения
-import astroHKL from './images/AstroHKL.jpg';
-import bigSell from './images/BigSell.jpg';
-import globerys from './images/Globerys.jpg';
-import hklFirstVersion from './images/hklFIrstVershion.jpg';
-import hklSecondVersion from './images/hklsecondvershion.jpg';
-import rukHTMLCSS from './images/rukHTML+CSS.jpg';
 
 const Projects = () => {
     useEffect(() => {
@@ -23,12 +16,23 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
+    // Получаем базовый путь для изображений
+    const getImagePath = (fileName) => {
+        // process.env.PUBLIC_URL автоматически добавляет '/Ilya-Kalabuk-Website-React.js' на GitHub Pages
+        // На локальном сервере это будет пустая строка
+        const basePath = process.env.PUBLIC_URL || '';
+        return `${basePath}/images/${fileName}`;
+    };
+
+    console.log('DEBUG: process.env.PUBLIC_URL =', process.env.PUBLIC_URL);
+    console.log('DEBUG: Первый путь изображения =', getImagePath('rukHTML+CSS.jpg'));
+
     const projects = [
         {
             id: 1,
             title: 'Руководство по HTML5 & CSS3',
             description: 'Полноценное современное и простое руководство для новичков. Подробное объяснение с примерами реального кода.',
-            image: rukHTMLCSS, // Используем импортированное изображение
+            image: getImagePath('rukHTML+CSS.jpg'),
             tech: ['HTML5', 'CSS3', 'JavaScript'],
             liveDemo: 'https://narrativee.github.io/RukovodstvoHTML-CSS-for-GM3/',
             github: 'https://github.com/NarraTivee/RukovodstvoHTML-CSS-for-GM3'
@@ -37,7 +41,7 @@ const Projects = () => {
             id: 2,
             title: 'Логистическая компания HKL',
             description: 'Итоговая версия сайта-визитки для логистической компании Halaburda&Kravel Logistic. Четко, минималистично и по делу. Выполнен на Astro.js.',
-            image: astroHKL,
+            image: getImagePath('AstroHKL.jpg'),
             tech: ['React.js', 'Astro.js', 'SCSS/SASS'],
             liveDemo: 'https://narrativee.github.io/HKL-with-Astro/',
             github: 'https://github.com/NarraTivee/HKL-with-Astro'
@@ -46,7 +50,7 @@ const Projects = () => {
             id: 3,
             title: 'Версия сайта для логистической компании',
             description: 'Вторая версия сайта-визитки для логистической компании Halaburda&Kravel Logistic основанная на React.js.',
-            image: hklSecondVersion,
+            image: getImagePath('hklsecondvershion.jpg'),
             tech: ['React.js', 'SCSS/SASS'],
             liveDemo: 'https://narrativee.github.io/HKL_secondVershion/',
             github: 'https://github.com/NarraTivee/HKL_secondVershion'
@@ -55,7 +59,7 @@ const Projects = () => {
             id: 4,
             title: 'Сайт-визитка логистической компании',
             description: 'Первая версия сайта-визитки на чистом HTML5 и CSS3 для логистической компании Halaburda&Kravel Logistic.',
-            image: hklFirstVersion,
+            image: getImagePath('hklFIrstVershion.jpg'),
             tech: ['HTML5', 'CSS3', 'JavaScript'],
             liveDemo: 'https://narrativee.github.io/HKL/',
             github: 'https://github.com/NarraTivee/HKL'
@@ -64,7 +68,7 @@ const Projects = () => {
             id: 5,
             title: 'Интернет магазин',
             description: 'Версия интернет магазина по продажи цифровых товаров для реального заказчика основаный на чистом HTML5 и CSS3.',
-            image: bigSell,
+            image: getImagePath('BigSell.jpg'),
             tech: ['HTML5', 'CSS3'],
             liveDemo: 'https://narrativee.github.io/BigSell/',
             github: 'https://github.com/NarraTivee/BigSell'
@@ -73,7 +77,7 @@ const Projects = () => {
             id: 6,
             title: 'Информационный двухстраничный сайт',
             description: 'Один из первых моих проектов. Стандартный информационный двухстраничный сайт на чистом HTML5 и CSS3.',
-            image: globerys,
+            image: getImagePath('Globerys.jpg'),
             tech: ['HTML5', 'CSS3'],
             liveDemo: 'https://narrativee.github.io/globerys/globerys.html',
             github: 'https://github.com/NarraTivee/globerys'
@@ -100,10 +104,11 @@ const Projects = () => {
                                     src={project.image}
                                     alt={project.title}
                                     onError={(e) => {
-                                        console.error(`❌ ОШИБКА: Не могу загрузить ${project.title}`);
-                                        e.target.onerror = null;
-                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233b0202'/%3E%3Ctext x='50%' y='50%' font-family='Arial' font-size='24' fill='%23FF5C5C' text-anchor='middle' dy='.3em'%3E" +
-                                            project.title.split(' ')[0] + "%3C/text%3E%3C/svg%3E";
+                                        console.error(`❌ ОШИБКА: Не могу загрузить ${project.image}`);
+                                        console.log('🔄 Пробую абсолютный URL...');
+                                        // Абсолютный URL как запасной вариант
+                                        const fileName = project.image.split('/').pop();
+                                        e.target.src = `https://narrativee.github.io/Ilya-Kalabuk-Website-React.js/images/${fileName}`;
                                     }}
                                 />
                             </div>
