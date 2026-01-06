@@ -16,16 +16,13 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
-    // Получаем базовый путь для изображений
     const getImagePath = (fileName) => {
-        // process.env.PUBLIC_URL автоматически добавляет '/Ilya-Kalabuk-Website-React.js' на GitHub Pages
-        // На локальном сервере это будет пустая строка
         const basePath = process.env.PUBLIC_URL || '';
         return `${basePath}/images/${fileName}`;
     };
 
     console.log('DEBUG: process.env.PUBLIC_URL =', process.env.PUBLIC_URL);
-    console.log('DEBUG: Первый путь изображения =', getImagePath('rukHTML+CSS.jpg'));
+    console.log('DEBUG: Первое изображение =', getImagePath('rukHTML+CSS.jpg'));
 
     const projects = [
         {
@@ -105,9 +102,10 @@ const Projects = () => {
                                     alt={project.title}
                                     onError={(e) => {
                                         console.error(`❌ ОШИБКА: Не могу загрузить ${project.image}`);
-                                        console.log('🔄 Пробую абсолютный URL...');
+                                        console.log('🔄 Использую абсолютный URL...');
                                         // Абсолютный URL как запасной вариант
                                         const fileName = project.image.split('/').pop();
+                                        e.target.onerror = null;
                                         e.target.src = `https://narrativee.github.io/Ilya-Kalabuk-Website-React.js/images/${fileName}`;
                                     }}
                                 />
