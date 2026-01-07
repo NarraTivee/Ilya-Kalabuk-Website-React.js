@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Ilya-Kalabuk-Website-React.js/static/css/main.b3aad6f0.css",
-    "main.js": "/Ilya-Kalabuk-Website-React.js/static/js/main.85aca9b0.js",
+    "main.js": "/Ilya-Kalabuk-Website-React.js/static/js/main.731f1b84.js",
     "static/media/ilya kalabyk.jpg": "/Ilya-Kalabuk-Website-React.js/static/media/ilya kalabyk.937b06686b631405265d.jpg",
     "index.html": "/Ilya-Kalabuk-Website-React.js/index.html",
     "main.b3aad6f0.css.map": "/Ilya-Kalabuk-Website-React.js/static/css/main.b3aad6f0.css.map",
-    "main.85aca9b0.js.map": "/Ilya-Kalabuk-Website-React.js/static/js/main.85aca9b0.js.map"
+    "main.731f1b84.js.map": "/Ilya-Kalabuk-Website-React.js/static/js/main.731f1b84.js.map"
   },
   "entrypoints": [
     "static/css/main.b3aad6f0.css",
-    "static/js/main.85aca9b0.js"
+    "static/js/main.731f1b84.js"
   ]
 }
